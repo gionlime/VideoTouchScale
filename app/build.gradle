@@ -7,7 +7,7 @@ android {
     buildToolsVersion "32.0.0"
 
     defaultConfig {
-        applicationId "cn.yinxm.video.scale"
+        applicationId "cn.yunbo.video.scale"
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 100
@@ -24,6 +24,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+
 }
 
 dependencies {

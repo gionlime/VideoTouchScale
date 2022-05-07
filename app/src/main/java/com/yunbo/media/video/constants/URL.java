@@ -10,7 +10,7 @@ import android.text.TextUtils;
 public final class URL {
     private static String[] URLS = new String[]{
             "https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f230000btcaac52m1gham4830p0&ratio=720p&line=0",
-            "https://video19.ifeng.com/video06/2012/04/11/629da9ec-60d4-4814-a940-997e6487804a.mp4"
+            "https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f230000btcaac52m1gham4830p0&ratio=720p&line=0",
     };
 
     public static String getPlayUrl() {
