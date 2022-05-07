@@ -1,11 +1,11 @@
 package com.yunbo.media.video.gesture.touch.anim;
 
+
 /**
- * <p>
- *
- * @author yinxuming
- * @date 2020/12/24
- */
+ * create by jeek
+ * 2022/5/7
+ * des:
+ **/
 public interface IVideoTouchEndAnim {
 
     void setEndAnimScale(float scale);

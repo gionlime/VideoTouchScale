@@ -9,20 +9,18 @@ import android.view.TextureView;
 import com.yunbo.media.video.gesture.touch.adapter.IVideoTouchAdapter;
 
 /**
- * 回弹动效参数计算、动画状态控制
- * <p>
- *
- * @author yinxuming
- * @date 2020/12/24
- */
+ * create by jeek
+ * 2022/5/7
+ * des: 回弹动效参数计算、动画状态控制
+ **/
 public class VideoTouchFixEndAnim implements IVideoTouchEndAnim {
 
-    private IVideoTouchAdapter mTouchAdapter;
-    private ValueAnimator mAnimator;
     float mScale = 1.0f;
     float mCurrentRotateDegrees;
     float mRotateEndFixDegrees;
     boolean isNeedFixAnim = false;
+    private IVideoTouchAdapter mTouchAdapter;
+    private ValueAnimator mAnimator;
 
     public VideoTouchFixEndAnim(IVideoTouchAdapter touchAdapter) {
         mTouchAdapter = touchAdapter;
@@ -66,6 +64,7 @@ public class VideoTouchFixEndAnim implements IVideoTouchEndAnim {
 
     /**
      * 计算transAnimX、transAnimY 得到endAnimMatrix，生成动画对象
+     *
      * @return
      */
     private ValueAnimator makeFixEndAnimator() {

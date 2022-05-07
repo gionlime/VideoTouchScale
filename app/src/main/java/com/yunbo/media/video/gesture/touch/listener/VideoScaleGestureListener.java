@@ -6,12 +6,14 @@ import com.yunbo.media.video.gesture.IGestureLayer;
 import com.yunbo.media.video.gesture.touch.handler.VideoTouchScaleHandler;
 
 /**
- * 手势缩放 播放画面
- */
+ * create by jeek
+ * 2022/5/7
+ * des: 手势缩放 播放画面
+ **/
 public class VideoScaleGestureListener implements ScaleGestureDetector.OnScaleGestureListener {
     private static final String TAG = "VideoScaleGestureListener";
-    private IGestureLayer mGestureLayer;
     public VideoTouchScaleHandler mScaleHandler;
+    private IGestureLayer mGestureLayer;
 
     public VideoScaleGestureListener(IGestureLayer gestureLayer) {
         mGestureLayer = gestureLayer;

@@ -4,11 +4,10 @@ import android.view.MotionEvent;
 import android.widget.FrameLayout;
 
 /**
- * <p>
- *
- * @author yinxuming
- * @date 2020/11/24
- */
+ * create by jeek
+ * 2022/5/7
+ * des:
+ **/
 public interface IGestureLayer {
     FrameLayout getContainer();
 

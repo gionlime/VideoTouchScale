@@ -1,5 +1,7 @@
 package com.yunbo.media.video;
 
+import static com.yunbo.media.video.util.VideoUrlTest.getPlayUrl;
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -8,18 +10,19 @@ import android.widget.ImageButton;
 
 import androidx.fragment.app.FragmentActivity;
 
-
 import com.yunbo.media.video.gesture.GestureLayer;
 import com.yunbo.media.video.gesture.touch.adapter.GestureVideoTouchAdapterImpl;
-import com.yunbo.media.video.surface.SimpleTextureViewPlayer;
+import com.yunbo.media.video.surface.TextureViewPlayer;
 import com.yunbo.media.video.util.StatusBarUtils;
 
-import static com.yunbo.media.video.util.VideoUrlTest.getPlayUrl;
-
-
+/**
+ * create by jeek
+ * 2022/5/7
+ * des: ScaleVideoActivity
+ **/
 public class ScaleVideoActivity extends FragmentActivity {
+    public TextureViewPlayer mTextureViewPlayer;
     private ViewGroup mVideoContent;
-    public SimpleTextureViewPlayer mTextureViewPlayer;
     private ImageButton mPlayPauseView;
     private boolean isPaused = false;
 

@@ -14,22 +14,29 @@ import com.yunbo.media.video.gesture.touch.anim.VideoTouchFixEndAnim;
 import com.yunbo.media.video.gesture.touch.handler.VideoTouchRotateHandler;
 import com.yunbo.media.video.gesture.touch.handler.VideoTouchScaleHandler;
 
-
 /**
- * 手势处理layer层
- */
+ * create by jeek
+ * 2022/5/7
+ * des: 手势处理layer层
+ **/
 public final class GestureLayer implements IGestureLayer, GestureDetector.OnGestureListener,
         GestureDetector.OnDoubleTapListener {
 
     private Context mContext;
     private FrameLayout mContainer;
 
-    /** 手势检测 */
+    /**
+     * 手势检测
+     */
     private GestureDetector mGestureDetector;
 
-    /** 手势缩放 检测 */
+    /**
+     * 手势缩放 检测
+     */
     private ScaleGestureDetector mScaleGestureDetector;
-    /** 手势缩放 处理 */
+    /**
+     * 手势缩放 处理
+     */
     private VideoTouchScaleHandler mScaleHandler;
     /**
      * 手势旋转 检测

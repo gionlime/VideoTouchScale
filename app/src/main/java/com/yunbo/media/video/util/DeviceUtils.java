@@ -21,8 +21,10 @@ import java.util.List;
 
 
 /**
- * 设备信息获取工具类
- */
+ * create by jeek
+ * 2022/5/7
+ * des: 设备信息获取工具类
+ **/
 public class DeviceUtils {
 
     /**

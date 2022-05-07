@@ -8,11 +8,10 @@ import android.view.ViewGroup;
 import com.yunbo.media.video.R;
 
 /**
- * <p>
- *
- * @author yinxuming
- * @date 2020/11/25
- */
+ * create by jeek
+ * 2022/5/7
+ * des:
+ **/
 public abstract class TouchScaleResetView implements View.OnClickListener {
     private Context mContext;
     private View mScaleResetContent;
@@ -26,12 +25,12 @@ public abstract class TouchScaleResetView implements View.OnClickListener {
         mScaleResetView.setOnClickListener(this);
     }
 
-    public void setVisibility(int visibility) {
-        mScaleResetContent.setVisibility(visibility);
-    }
-
     public int getVisibility() {
         return mScaleResetContent.getVisibility();
+    }
+
+    public void setVisibility(int visibility) {
+        mScaleResetContent.setVisibility(visibility);
     }
 
     @Override

@@ -12,25 +12,22 @@ import android.view.TextureView;
 import android.view.ViewGroup;
 import android.widget.MediaController;
 
-import java.io.IOException;
-
 import com.yunbo.media.video.controller.VideoPlayController;
 
+import java.io.IOException;
+
 /**
- * MediaPlayer + TextureView 播放视频
- * <p>
- *
- * @author yinxuming
- * @date 2020/7/6
- */
-public class SimpleTextureViewPlayer extends TextureView implements TextureView.SurfaceTextureListener,
+ * create by jeek
+ * 2022/5/7
+ * des: MediaPlayer + TextureView 播放视频
+ **/
+public class TextureViewPlayer extends TextureView implements TextureView.SurfaceTextureListener,
         VideoPlayController {
     private static final String TAG = "SimpleTextureViewPlayer";
-
-    private MediaPlayer mMediaPlayer;
     SurfaceTexture mSurfaceTexture;
     Surface mSurface;
     String mPlayUrl;
+    private MediaPlayer mMediaPlayer;
     private int mVideoWidth, mVideoHeight;
     private MediaController mMediaController;
 
@@ -40,15 +37,15 @@ public class SimpleTextureViewPlayer extends TextureView implements TextureView.
     private MediaPlayer.OnVideoSizeChangedListener mOnVideoSizeChangedListener;
 
 
-    public SimpleTextureViewPlayer(Context context) {
+    public TextureViewPlayer(Context context) {
         this(context, null);
     }
 
-    public SimpleTextureViewPlayer(Context context, AttributeSet attrs) {
+    public TextureViewPlayer(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public SimpleTextureViewPlayer(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TextureViewPlayer(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
     }

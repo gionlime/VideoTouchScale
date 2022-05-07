@@ -7,13 +7,12 @@ import android.view.TextureView;
 import com.yunbo.media.video.gesture.touch.RotateGestureDetector;
 import com.yunbo.media.video.gesture.touch.adapter.IVideoTouchAdapter;
 
+
 /**
- * 手势旋转 处理
- * <p>
- *
- * @author yinxuming
- * @date 2020/12/23
- */
+ * create by jeek
+ * 2022/5/7
+ * des: 手势旋转 处理
+ **/
 public class VideoTouchRotateHandler implements IVideoRotateHandler, RotateGestureDetector.OnRotateGestureListener {
 
     private IVideoTouchAdapter mTouchAdapter;
@@ -23,6 +22,26 @@ public class VideoTouchRotateHandler implements IVideoRotateHandler, RotateGestu
 
     public VideoTouchRotateHandler(IVideoTouchAdapter videoTouchAdapter) {
         mTouchAdapter = videoTouchAdapter;
+    }
+
+    /**
+     * 计算旋转结束后需要补偿的角度
+     *
+     * @param currentRotateDegree
+     * @return
+     */
+    public static float computeRoteEndDegree(float currentRotateDegree) {
+        float rotateEndFixDegrees = currentRotateDegree % 90;
+        if (rotateEndFixDegrees != 0) {
+            if (rotateEndFixDegrees >= 45) { // 大于45度，直接旋转到90，计算旋转到90需要的角度
+                rotateEndFixDegrees = 90 - rotateEndFixDegrees;
+            } else if (rotateEndFixDegrees > -45 && rotateEndFixDegrees < 45) { // (-45, 45)，回弹到0度位置
+                rotateEndFixDegrees = -rotateEndFixDegrees;
+            } else if (rotateEndFixDegrees < -45) { // 小于-45，直接旋转到-90，计算旋转到90需要的角度
+                rotateEndFixDegrees = -90 - rotateEndFixDegrees;
+            }
+        }
+        return rotateEndFixDegrees;
     }
 
     @Override
@@ -51,7 +70,6 @@ public class VideoTouchRotateHandler implements IVideoRotateHandler, RotateGestu
         updateMatrixToTexture(matrix);
         setRotateDegrees(getCurrentRotateDegree() + rotateDegree);
     }
-
 
     @Override
     public void onRotateEnd(RotateGestureDetector detector) {
@@ -89,6 +107,7 @@ public class VideoTouchRotateHandler implements IVideoRotateHandler, RotateGestu
 
     /**
      * 旋转回弹动画结束后，更新已补偿的角度
+     *
      * @param rotateDegree
      */
     @Override
@@ -121,25 +140,6 @@ public class VideoTouchRotateHandler implements IVideoRotateHandler, RotateGestu
                 textureView.invalidate();
             }
         }
-    }
-
-    /**
-     * 计算旋转结束后需要补偿的角度
-     * @param currentRotateDegree
-     * @return
-     */
-    public static float computeRoteEndDegree(float currentRotateDegree) {
-        float rotateEndFixDegrees = currentRotateDegree % 90;
-        if (rotateEndFixDegrees != 0) {
-            if (rotateEndFixDegrees >= 45) { // 大于45度，直接旋转到90，计算旋转到90需要的角度
-                rotateEndFixDegrees = 90 - rotateEndFixDegrees;
-            } else if (rotateEndFixDegrees > -45 && rotateEndFixDegrees < 45) { // (-45, 45)，回弹到0度位置
-                rotateEndFixDegrees = -rotateEndFixDegrees;
-            } else if (rotateEndFixDegrees < -45) { // 小于-45，直接旋转到-90，计算旋转到90需要的角度
-                rotateEndFixDegrees = -90 - rotateEndFixDegrees;
-            }
-        }
-        return rotateEndFixDegrees;
     }
 
 }

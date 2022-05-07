@@ -1,10 +1,10 @@
 package com.yunbo.media.video.gesture.touch.handler;
 
+
 /**
- * <p>
- *
- * @author yinxuming
- * @date 2020/5/19
- */
+ * create by jeek
+ * 2022/5/7
+ * des:
+ **/
 public interface IVideoTouchHandler {
 }

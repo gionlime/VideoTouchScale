@@ -5,10 +5,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Build;
-
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.View;
@@ -16,15 +12,19 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-
 /**
- * hk状态栏工具类
+ * create by jeek
+ * 2022/5/7
+ * des: 状态栏工具类
  * 隐藏状态栏：setStatusBar(getWindow(), false, false, false);
  * 全屏：setStatusBar(getWindow(), false, false, true);
- */
+ **/
 public class StatusBarUtils {
 
     private static final int SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT = 0x00000010;
@@ -33,6 +33,7 @@ public class StatusBarUtils {
 
     /**
      * 全屏
+     *
      * @param window
      */
     public static void fullScreen(Window window) {

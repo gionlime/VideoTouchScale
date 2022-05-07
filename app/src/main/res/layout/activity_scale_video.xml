@@ -9,9 +9,10 @@
     <FrameLayout
         android:id="@+id/video_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@mipmap/live_buildin_0">
 
-        <com.yunbo.media.video.surface.SimpleTextureViewPlayer
+        <com.yunbo.media.video.surface.TextureViewPlayer
             android:id="@+id/texture_player"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

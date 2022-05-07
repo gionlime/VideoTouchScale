@@ -1,12 +1,10 @@
 package com.yunbo.media.video.gesture.touch.handler;
 
 /**
- * 手势旋转处理
- * <p>
- *
- * @author yinxuming
- * @date 2020/12/24
- */
+ * create by jeek
+ * 2022/5/7
+ * des: 手势旋转处理
+ **/
 public interface IVideoRotateHandler extends IVideoTouchHandler {
     /**
      * 是否处于旋转中

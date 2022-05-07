@@ -12,28 +12,29 @@ import android.widget.Toast;
 import com.yunbo.media.video.gesture.touch.adapter.IVideoTouchAdapter;
 import com.yunbo.media.video.gesture.touch.ui.TouchScaleResetView;
 
+
 /**
- * 播放器画面双指手势缩放处理：
+ * create by jeek
+ * 2022/5/7
+ * des: 播放器画面双指手势缩放处理：
  * 1. 双指缩放
  * 2. 双指平移
  * 3. 缩放结束后，若为缩小画面，居中动效
  * 4. 缩放结束后，若为放大画面，自动吸附屏幕边缘动效
  * 5. 暂停播放下，实时更新缩放画面
- * MyApplication/touchEvent_01/src/main/java/cn/yinxm/tevent/gesture/imgview/PinchImageView.java
- */
+ **/
 public class VideoTouchScaleHandler implements IVideoTouchHandler, ScaleGestureDetector.OnScaleGestureListener {
-    private Context mContext;
     public FrameLayout mContainer;
     protected boolean mTouchReset;
+    IVideoTouchAdapter mTouchAdapter;
+    TouchScaleResetView mScaleRestView;
+    private Context mContext;
     private boolean openScaleTouch = true; // 开启缩放
     private boolean mIsScaleTouch;
     private float mStartCenterX, mStartCenterY, mLastCenterX, mLastCenterY, centerX, centerY;
     private float mStartSpan, mLastSpan, mCurrentSpan;
     private float mScale = 1.0f;
     private float mMinScale = 0.3F, mMaxScale = 3F;
-
-    IVideoTouchAdapter mTouchAdapter;
-    TouchScaleResetView mScaleRestView;
 
     public VideoTouchScaleHandler(Context context, FrameLayout container,
                                   IVideoTouchAdapter videoTouchAdapter) {

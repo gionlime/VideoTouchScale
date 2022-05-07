@@ -3,12 +3,10 @@ package com.yunbo.media.video.gesture.touch;
 import android.view.MotionEvent;
 
 /**
- * 双指手势旋转识别
- * <p>
- *
- * @author yinxuming
- * @date 2020/12/22
- */
+ * create by jeek
+ * 2022/5/7
+ * des: 双指手势旋转识别
+ **/
 public class RotateGestureDetector {
     private OnRotateGestureListener mRotateGestureListener;
     private boolean mIsRotate = false;

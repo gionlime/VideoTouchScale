@@ -9,23 +9,17 @@ import androidx.annotation.CallSuper;
 
 
 /**
- * 缩放动画
- * <p>
- * 在给定时间内从startMatrix变化到endMatrix，参考：
- * [PinchImageView](https://github.com/boycy815/PinchImageView/blob/master/pinchimageview/src/main/java/com/boycy815/pinchimageview/PinchImageView.java)
- *
- * @author yinxuming
- * @date 2020/12/2
- */
+ * create by jeek
+ * 2022/5/7
+ * des: 缩放动画
+ **/
 public abstract class ScaleRotateEndAnimator extends ValueAnimator implements ValueAnimator.AnimatorUpdateListener,
         Animator.AnimatorListener {
-    private static final String TAG = "VideoScaleEndAnimator";
-
     /**
      * 图片缩放动画时间
      */
     public static final int SCALE_ANIMATOR_DURATION = 1000;
-
+    private static final String TAG = "VideoScaleEndAnimator";
     private Matrix mStartMatrix = new Matrix();
     private Matrix mEndMatrix = new Matrix();
     private Matrix mMatrix = new Matrix();

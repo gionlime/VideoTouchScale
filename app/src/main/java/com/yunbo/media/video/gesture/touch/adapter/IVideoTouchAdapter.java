@@ -8,12 +8,10 @@ import com.yunbo.media.video.gesture.touch.anim.IVideoTouchEndAnim;
 import com.yunbo.media.video.gesture.touch.handler.IVideoRotateHandler;
 
 /**
- * 播放器手势触摸适配，手势与播放器之间的适配层
- * <p>
- *
- * @author yinxuming
- * @date 2020/5/14
- */
+ * create by jeek
+ * 2022/5/7
+ * des: 播放器手势触摸适配，手势与播放器之间的适配层
+ **/
 public interface IVideoTouchAdapter {
 
     @Nullable

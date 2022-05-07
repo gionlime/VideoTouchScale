@@ -1,11 +1,10 @@
 package com.yunbo.media.video.controller;
 
 /**
- * <p>
- *
- * @author yinxuming
- * @date 2020/7/6
- */
+ * create by jeek
+ * 2022/5/7
+ * des:
+ **/
 public class SimpleVideoController implements VideoPlayController {
     @Override
     public void start() {
