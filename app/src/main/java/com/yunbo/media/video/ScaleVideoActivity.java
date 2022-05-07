@@ -1,6 +1,5 @@
 package com.yunbo.media.video;
 
-import static com.yunbo.media.video.util.VideoUrlTest.getPlayUrl;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -10,6 +9,7 @@ import android.widget.ImageButton;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.yunbo.media.video.constants.URL;
 import com.yunbo.media.video.gesture.GestureLayer;
 import com.yunbo.media.video.gesture.touch.adapter.GestureVideoTouchAdapterImpl;
 import com.yunbo.media.video.surface.TextureViewPlayer;
@@ -51,7 +51,7 @@ public class ScaleVideoActivity extends FragmentActivity {
                     isPaused = false;
                     changePlayBtnStyle(true);
                 } else {
-                    mTextureViewPlayer.startPlay(getPlayUrl());
+                    mTextureViewPlayer.startPlay(URL.getPlayUrl());
                     changePlayBtnStyle(true);
                 }
             }
@@ -95,9 +95,9 @@ public class ScaleVideoActivity extends FragmentActivity {
         mTextureViewPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                String newUrl = getPlayUrl(0);
-                if (mTextureViewPlayer.getPlayUrl().equals(getPlayUrl(0))) {
-                    newUrl = getPlayUrl(1);
+                String newUrl = URL.getPlayUrl(0);
+                if (mTextureViewPlayer.getPlayUrl().equals(URL.getPlayUrl(0))) {
+                    newUrl = URL.getPlayUrl(1);
                 }
                 mTextureViewPlayer.startPlay(newUrl);
             }
