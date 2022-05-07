@@ -34,7 +34,7 @@ public class VideoTouchScaleHandler implements IVideoTouchHandler, ScaleGestureD
     private float mStartCenterX, mStartCenterY, mLastCenterX, mLastCenterY, centerX, centerY;
     private float mStartSpan, mLastSpan, mCurrentSpan;
     private float mScale = 1.0f;
-    private float mMinScale = 0.3F, mMaxScale = 3F;
+    private float mMinScale = 0.1F, mMaxScale = 10F;
 
     public VideoTouchScaleHandler(Context context, FrameLayout container,
                                   IVideoTouchAdapter videoTouchAdapter) {
