@@ -31,17 +31,17 @@ public class VideoTouchRotateHandler implements IVideoRotateHandler, RotateGestu
      * @return
      */
     public static float computeRoteEndDegree(float currentRotateDegree) {
-        float rotateEndFixDegrees = currentRotateDegree % 90;
-        if (rotateEndFixDegrees != 0) {
-            if (rotateEndFixDegrees >= 45) { // 大于45度，直接旋转到90，计算旋转到90需要的角度
-                rotateEndFixDegrees = 90 - rotateEndFixDegrees;
-            } else if (rotateEndFixDegrees > -45 && rotateEndFixDegrees < 45) { // (-45, 45)，回弹到0度位置
-                rotateEndFixDegrees = -rotateEndFixDegrees;
-            } else if (rotateEndFixDegrees < -45) { // 小于-45，直接旋转到-90，计算旋转到90需要的角度
-                rotateEndFixDegrees = -90 - rotateEndFixDegrees;
-            }
-        }
-        return rotateEndFixDegrees;
+//        float rotateEndFixDegrees = currentRotateDegree % 90;
+//        if (rotateEndFixDegrees != 0) {
+//            if (rotateEndFixDegrees >= 45) { // 大于45度，直接旋转到90，计算旋转到90需要的角度
+//                rotateEndFixDegrees = 90 - rotateEndFixDegrees;
+//            } else if (rotateEndFixDegrees > -45 && rotateEndFixDegrees < 45) { // (-45, 45)，回弹到0度位置
+//                rotateEndFixDegrees = -rotateEndFixDegrees;
+//            } else if (rotateEndFixDegrees < -45) { // 小于-45，直接旋转到-90，计算旋转到90需要的角度
+//                rotateEndFixDegrees = -90 - rotateEndFixDegrees;
+//            }
+//        }
+        return 0;
     }
 
     @Override

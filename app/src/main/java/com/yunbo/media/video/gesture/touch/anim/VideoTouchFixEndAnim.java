@@ -50,7 +50,7 @@ public class VideoTouchFixEndAnim implements IVideoTouchEndAnim {
         if (mAnimator == null) {
             return;
         }
-        mAnimator.start();
+        //mAnimator.start();
     }
 
 
